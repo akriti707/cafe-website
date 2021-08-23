@@ -1,0 +1,176 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-size: 20px;
+    overflow-x: hidden;
+    color: white;
+    font-family: 'Flamenco', cursive;
+}
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('4-coffee-shop.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.clearfix:after{
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+}
+.row{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.logo{
+    /* z-index: -1;*/
+    height: 160px;
+    width:160px;
+    float: left;
+    margin-top: 20px;
+   
+}
+.main-nav{
+    float:right;
+    margin-top: 60px;
+}
+.main-nav li{
+    display:inline-block;
+    list-style:none;
+    margin-left:25px ;
+}
+.main-nav li a{
+    padding: 5px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 100;
+}
+.main-nav li a:hover{
+    border-bottom: 2px solid #b965dd;
+}
+.main-content-header{
+    /*border: 1px solid red;*/
+    width:1180px ; 
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h1{
+    color:#fff ;
+    font-size: 240%;
+    word-spacing:4px;
+    letter-spacing:2px;
+    margin-bottom: 20px;
+    /*text-transform:uppercase;*/
+    font-weight: lighter;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight:lighter;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 200px;
+    transition: background-color 0.2s,border 0.2s,color 0.2s;
+}
+.btn-full{
+    background-color: transparent;
+    color:#b965dd;
+    margin-right:15px;
+    border:1px solid #b965dd;
+
+}
+.btn-full:hover{
+    background-color: #fff;
+    
+}
+.btn-nav{
+    background-color: transparent;
+    color: #fff;
+    border:1px solid #fff;
+}
+.btn-nav:hover{
+    background-color:#b965dd ;
+}
+.btn-signup{
+    background-color: transparent;
+    color: red;
+  }
+.colorchange{
+    animation: colorchangeaanya 1s infinite;
+}
+@keyframes colorchangeaanya{
+    0%{color: red;}
+    25%{color:#b965dd;}
+    50%{color: blue;}
+    100%{color:#b965dd; }
+}
+.mobile-icon{
+    display: none;
+}
+
+/*//////responsive queries//////*/
+@media only screen and (max-width:1180px){
+    .main-content-header{
+        width: 100%;
+        padding: 0 2%;
+    }
+    .main-nav li{padding: 1.5px; margin-right:7px;}
+}
+@media only screen and (max-width:998px){
+    h1{font-size: 200%;}
+}
+@media only screen and (max-width:737px){
+    h1{font-size: 180%;}
+    .main-nav{display: none;}
+    .mobile-icon{
+        color: #b88fca;
+        padding: 30px;
+        display:inline-block;
+        float:right;
+    }
+    .main-nav{float: left;}
+    .main-nav li{
+        
+        display: block;
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width:390px){
+    h1{font-size: 160%;}
+    .main-nav{display: none;}
+    .mobile-icon{
+        color: #b88fca;
+        padding: 15px;
+        display:inline-block;
+        float:right;
+    }
+    .main-nav{float: left;}
+    .main-nav li{
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width:361px){
+    h1{font-size: 140%;}
+    .main-nav{display: none;}
+    .mobile-icon{
+        color: #b88fca;
+        padding: 14px;
+        display:inline-block;
+        float:right;
+    }
+    .main-nav{float: left;}
+    .main-nav li{
+        display: block;
+        margin-top: 4px;
+    }
+}
